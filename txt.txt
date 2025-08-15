@@ -1,0 +1,117 @@
+ <!-- Card 1 -->
+        <div class="feedback-card active bg-gray-800 rounded-xl p-6  border border-cyan-400 shadow-[0_0_20px_#22d3ee]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">
+            "FKode built our mobile app with the same care we would."
+          </p>
+          <p class="font-semibold text-cyan-400 text-sm font-garamond">— Business Client</p>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-pink-400 shadow-[0_0_20px_#ec4899]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Best mentor team for student projects."</p>
+          <p class="font-semibold text-pink-400 text-sm font-garamond">— Engineering Student</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-indigo-400 shadow-[0_0_20px_#818cf8]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"From WhatsApp to deployment, their process is
+            smooth."</p>
+          <p class="font-semibold text-indigo-400 text-sm font-garamond">— Startup Founder</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-cyan-400 shadow-[0_0_20px_#22d3ee]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Quick turnarounds and impressive quality every
+            time."</p>
+          <p class="font-semibold text-cyan-400 text-sm font-garamond">— Tech Consultant</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-purple-400 shadow-[0_0_20px_#a78bfa]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Their UI/UX work elevated our platform’s user
+            experience."</p>
+          <p class="font-semibold text-purple-400 text-sm font-garamond">— UI Designer</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-teal-400 shadow-[0_0_20px_#2dd4bf]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"FKode helped us pivot fast with stable backend
+            support."</p>
+          <p class="font-semibold text-teal-300 text-sm font-garamond">— Product Owner</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="feedback-card bg-gray-800 rounded-xl p-6 sm:p-8 max-w-xs mx-auto border border-blue-400 shadow-[0_0_20px_#3b82f6]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Reliable, scalable solutions even for short
+            timelines."</p>
+          <p class="font-semibold text-blue-400 text-sm font-garamond">— SaaS Client</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="feedback-card bg-gray-800 rounded-xl p-6 sm:p-8 max-w-xs mx-auto border border-rose-400 shadow-[0_0_20px_#fb7185]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Excellent support throughout our project cycle."
+          </p>
+          <p class="font-semibold text-rose-400 text-sm font-garamond">— Corporate Partner</p>
+        </div>
+
+        <!-- Card 9 -->
+        <div
+          class="feedback-card bg-gray-800 rounded-xl p-6 sm:p-8 max-w-xs mx-auto border border-emerald-400 shadow-[0_0_20px_#34d399]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"Friendly, fast, and cost-effective. Highly
+            recommend!"</p>
+          <p class="font-semibold text-emerald-400 text-sm font-garamond">— Independent Developer</p>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="feedback-card bg-gray-800 rounded-xl p-6 border border-yellow-400 shadow-[0_0_20px_#facc15]">
+          <div class="flex text-yellow-400 text-xl mb-2 space-x-1">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+              class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p class="italic text-gray-200 text-sm mb-2 font-garamond">"They made even complex integrations look easy."
+          </p>
+          <p class="font-semibold text-yellow-400 text-sm font-garamond">— DevOps Engineer</p>
+        </div>
+      </div>
