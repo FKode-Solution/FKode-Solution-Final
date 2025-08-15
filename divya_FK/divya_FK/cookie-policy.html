@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookie Policy | FKode Solution</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      color: #ff4f5a;
+    }
+
+    #main-content {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Loader styles */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      display: none; /* Hidden by default */
+    }
+
+    .loader-ring {
+      width: 56px;
+      height: 56px;
+      border: 4px solid #444;
+      border-top-color: #00ffff;
+      border-radius: 9999px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    #loader-text {
+      color: #67e8f9;
+      font-size: 14px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loader (only shows if network is slow) -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <p id="loader-text">Loading...</p>
+  </div>
+
+  <!-- Cookie Policy Content -->
+  <div id="main-content" style="display: none;">
+    <h1>Cookie Policy</h1>
+    <p><strong>Effective Date:</strong> 15 July 2025</p>
+
+    <p>FKode Solution uses cookies and similar technologies to enhance your browsing experience, analyze traffic, and
+      maintain secure sessions across our platforms.</p>
+
+    <h2>What Are Cookies?</h2>
+    <p>Cookies are small text files that websites store on your device to remember your preferences, login status, and
+      how you interact with the site.</p>
+
+    <h2>Types of Cookies We Use</h2>
+    <ul>
+      <li><strong>Essential Cookies</strong> – Required for basic functions like page navigation and secure login.</li>
+      <li><strong>Analytics Cookies</strong> – Help us understand how users engage with our website using tools like
+        Google Analytics.</li>
+      <li><strong>Preference Cookies</strong> – Store your settings such as language, theme, or layout preferences.</li>
+    </ul>
+
+    <h2>Managing Cookies</h2>
+    <p>You can manage or disable cookies through your browser settings. However, disabling some cookies may impact
+      functionality or your user experience.</p>
+
+    <h2>Third-Party Cookies</h2>
+    <p>Some cookies may be set by trusted third-party services we use to improve functionality or performance. These
+      third parties are required to respect your privacy and comply with data protection standards.</p>
+
+    <h2>Your Consent</h2>
+    <p>By using our website, you consent to the use of cookies as described in this policy. You may withdraw your
+      consent at any time by adjusting your browser settings.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions regarding this Cookie Policy, you can reach us at:</p>
+    <p>Email: <a href="mailto:spartanmartialarts100@gmail.com">spartanmartialarts100@gmail.com</a></p>
+  </div>
+
+  <script>
+    // Only show loader if load takes longer than 300ms
+    let loaderTimeout = setTimeout(() => {
+      document.getElementById("loader").style.display = "flex";
+    }, 300); // adjust as needed
+
+    window.addEventListener("load", () => {
+      clearTimeout(loaderTimeout);
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    });
+  </script>
+
+</body>
+
+</html>

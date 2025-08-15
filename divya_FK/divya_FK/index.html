@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FKode Solution - Digital Transformation Partner</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ef4444',
+            secondary: '#3b82f6'
+          },
+          borderRadius: {
+            none: '0px',
+            sm: '4px',
+            DEFAULT: '8px',
+            md: '12px',
+            lg: '16px',
+            xl: '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            full: '9999px',
+            button: '8px'
+          },
+          fontFamily: {
+            garamond: ['"EB Garamond"', 'serif'],
+            inter: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+
+
+  <style>
+    :where([class^="ri-"])::before {
+      content: "\f3c2";
+    }
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a8a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* background-image: url('Home-bg.jpg'); */
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    /* Custom Silver Colors */
+    .text-silver-200 { color: #e5e5e5; }
+    .text-silver-300 { color: #d4d4d4; }
+    .text-silver-400 { color: #a3a3a3; }
+    .text-silver-500 { color: #737373; }
+
+    /* Full Cover Hero Background with 3D Effects */
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                  url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      min-height: 100vh;
+      width: 100%;
+      animation: background-slideshow 60s ease-in-out infinite, hero-bg-float 15s ease-in-out infinite;
+      perspective: 1000px;
+    }
+
+    /* Background Slideshow Animation with 3D Effects */
+    @keyframes background-slideshow {
+      0%, 6.25% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      6.26%, 12.5% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+      12.51%, 18.75% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(-1deg) rotateY(1deg) scale(1.01);
+      }
+      18.76%, 25% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      25.01%, 31.25% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+    
+      37.51%, 43.75% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      43.76%, 50% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+      50.01%, 56.25% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(-1deg) rotateY(1deg) scale(1.01);
+      }
+      56.26%, 62.5% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      62.51%, 68.75% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+     
+      75.01%, 81.25% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      81.26%, 87.5% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+      87.51%, 93.75% {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(26, 26, 26, 0.6) 25%, rgba(45, 45, 45, 0.6) 50%, rgba(26, 26, 26, 0.6) 75%, rgba(0, 0, 0, 0.6) 100%),
+                    url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop') center/cover no-repeat fixed;
+        transform: perspective(1000px) rotateX(-1deg) rotateY(1deg) scale(1.01);
+      }
+     
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(169, 169, 169, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(128, 128, 128, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 40%, rgba(105, 105, 105, 0.1) 0%, transparent 50%);
+      z-index: 0;
+      animation: galaxy-float 30s ease-in-out infinite;
+    }
+
+    @keyframes galaxy-float {
+      0%, 100% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      25% {
+        transform: perspective(1000px) rotateX(1deg) rotateY(-1deg) scale(1.02);
+      }
+      50% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
+      }
+      75% {
+        transform: perspective(1000px) rotateX(-1deg) rotateY(1deg) scale(1.02);
+      }
+    }
+
+    @keyframes stars-twinkle {
+      0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+
+    
+
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 1s ease-out forwards;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .slide-in-right {
+      animation: slideInRight 1s ease-out forwards;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .btn-hover {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-hover:hover::before {
+      left: 100%;
+    }
+
+    .nav-item {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #ef4444;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .theme-transition {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .dark .hero-bg {
+      background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    }
+
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      display: none;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+      display: block;
+    }
+
+    /* Service Slideshow and 3D Effects */
+    .service-slideshow {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .service-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: perspective(1000px) rotateY(90deg) translateZ(-100px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .service-slide.active {
+      opacity: 1;
+      transform: perspective(1000px) rotateY(0deg) translateZ(0px);
+    }
+
+    .service-slide.prev {
+      transform: perspective(1000px) rotateY(-90deg) translateZ(-100px);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1rem 1rem 0 0;
+      transition: all 0.5s ease;
+    }
+
+    .service-slide:hover .service-image {
+      transform: scale(1.05);
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+   /* Service Card Images */
+    .service-image-3d {
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      filter: brightness(1.02) contrast(1.05);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .service-image-3d:hover {
+      filter: brightness(1.1) contrast(1.15) saturate(1.1);
+      transform: scale(1.05);
+    }
+
+    /* Enhanced Service Icons */
+    .service-icon-container {
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-icon-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .service-icon-container:hover::before {
+      left: 100%;
+    }
+
+    .service-icon-container:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-icon {
+      transition: all 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    }
+
+    .service-icon-container:hover .service-icon {
+      transform: scale(1.1);
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    /* Dark Mode Professional Images */
+    .dark .professional-image-container {
+      background: linear-gradient(145deg, #1f2937, #111827);
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .dark .professional-image {
+      filter: brightness(1.02) contrast(1.05);
+    }
+
+    .dark .professional-image-container:hover .professional-image {
+      filter: brightness(1.08) contrast(1.1) saturate(1.05);
+    }
+
+    /* Responsive Image Sizing */
+    @media (max-width: 1024px) {
+      .professional-image-container {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .professional-image-container {
+        width: 5rem;
+        height: 5rem;
+      }
+      
+      .laptop-image-3d {
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .professional-image-container {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+      
+      .laptop-image-3d {
+        max-width: 240px;
+      }
+    }
+
+    /* Enhanced Bold Text Effects with Smooth Transitions */
+    .text-3d-effect h1 {
+      font-weight: 900 !important;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .text-3d-effect h1:hover {
+      transform: perspective(1000px) translateZ(30px) rotateX(3deg) rotateY(3deg) scale(1.05);
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+
+    .text-3d-effect p {
+      font-weight: 700 !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .text-3d-effect p:hover {
+      transform: perspective(1000px) translateZ(15px) rotateX(2deg) rotateY(2deg) scale(1.02);
+      color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    .letter-3d {
+      font-weight: 800 !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .letter-3d:hover {
+      transform: perspective(1000px) translateZ(25px) rotateX(8deg) rotateY(8deg) scale(1.1);
+      color: #ffffff !important;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    }
+    /* Enhanced Button Effects */
+    .btn-3d {
+      font-weight: 900 !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-3d:hover {
+      transform: perspective(1000px) translateZ(20px) rotateX(5deg) rotateY(5deg) scale(1.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-3d:active {
+      transform: perspective(1000px) translateZ(10px) rotateX(2deg) rotateY(2deg) scale(0.95);
+      transition: all 0.1s ease;
+    }
+
+
+
+    /* Enhanced Glowing Effects for Content */
+    .text-3d-effect h1 {
+      font-weight: 900 !important;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: text-glow 3s ease-in-out infinite alternate;
+    }
+
+    .text-3d-effect h1:hover {
+      transform: perspective(1000px) translateZ(30px) rotateX(3deg) rotateY(3deg) scale(1.05);
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3);
+    }
+
+    .text-3d-effect p {
+      font-weight: 700 !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+      animation: text-glow-subtle 4s ease-in-out infinite alternate;
+    }
+
+    .text-3d-effect p:hover {
+      transform: perspective(1000px) translateZ(15px) rotateX(2deg) rotateY(2deg) scale(1.02);
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+    }
+
+    .letter-3d {
+      font-weight: 800 !important;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: letter-glow 2s ease-in-out infinite alternate;
+    }
+
+    .letter-3d:hover {
+      transform: perspective(1000px) translateZ(25px) rotateX(8deg) rotateY(8deg) scale(1.1);
+      color: #ffffff !important;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Glow Animations */
+    @keyframes text-glow {
+      0% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+      }
+      100% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    @keyframes text-glow-subtle {
+      0% {
+        text-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+      }
+      100% {
+        text-shadow: 0 0 25px rgba(192, 192, 192, 0.6);
+      }
+    }
+
+    @keyframes letter-glow {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
+      }
+    }
+
+
+
+  </style>
+  <style>
+  #particles-js {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+</style>
+
+  <style>
+    .carousel-container {
+      perspective: 1000px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .feedback-card {
+      flex: 0 0 100%;
+      opacity: 0;
+      transform: translateX(100%) scale(0.9) rotateY(-10deg);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      position: relative;
+      z-index: 0;
+    }
+
+    .feedback-card.active {
+      opacity: 1;
+      transform: translateX(0) scale(1) rotateY(0deg);
+      z-index: 10;
+    }
+
+    .feedback-card.prev {
+      opacity: 0;
+      transform: translateX(-100%) scale(0.9) rotateY(10deg);
+      z-index: 5;
+    }
+  </style>
+
+  <!-- logo-zoom -->
+  <style>
+    .hover\:drop-shadow-glow:hover {
+      filter: drop-shadow(0 0 10px rgba(255, 0, 100, 0.6)) drop-shadow(0 0 20px rgba(255, 0, 100, 0.3));
+    }
+  </style>
+
+  <!-- Fade animation -->
+  <style>
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-fade-in-out {
+      animation: fadeOut 3s ease-in-out forwards;
+    }
+  </style>
+</head>
+
+<!-- Home Navbar-->
+
+<body class="theme-transition bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  
+  <header
+    class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 theme-transition">
+    <nav class="w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-2 slide-in-left">
+
+          <!-- Zoom Wrapper -->
+          <div
+            class="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center  transition-transform duration-300 hover:scale-150">
+            <img src="ori-logo.jpeg" alt="FKode Logo" class="h-full w-full object-cover" />
+          </div>
+
+          <span class="font-garamond text-xl font-bold text-gray-900 dark:text-white group hover:cursor-pointer">
+            <span class="transition-colors duration-300 group-hover:text-red-800 font-garamond">FKode</span>
+            <span class="transition-colors duration-300 group-hover:text-sky-400 font-garamond"> Solution</span>
+          </span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#home"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Home</a>
+          <a href="#offer"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">What We
+            Offer</a>
+          <a href="#why"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Why FKode</a>
+          <a href="#tech"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Tech
+            Stack</a>
+          <a href="#industries"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Industries</a>
+          <a href="#team"
+            class=" nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold  font-garamond">Founder
+            </a>
+          <a href="#feedback"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Client
+            Feedback</a>
+          <a href="#contact"
+            class="nav-item text-gray-700 dark:text-gray-300 hover:text-primary font-bold font-garamond">Contact
+            Us</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle"
+            class="w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors theme-transition">
+            <i class="ri-sun-line dark:hidden text-gray-600"></i>
+            <i class="ri-moon-line hidden dark:block text-gray-300"></i>
+          </button>
+          <button id="mobile-menu-toggle"
+            class="md:hidden w-10 h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <i class="ri-menu-line text-gray-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Navbar -->
+    <div id="mobile-menu"
+      class="mobile-menu fixed top-16 left-0 w-full h-screen bg-white dark:bg-gray-900 md:hidden z-40 theme-transition">
+      <div class="flex flex-col space-y-4 p-6">
+        <a href="#home"
+          class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Home</a>
+        <a href="#offer" class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">What
+          We Offer</a>
+        <a href="#why" class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Why
+          FKode</a>
+        <a href="#tech" class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Tech
+          Stack</a>
+        <a href="#industries"
+          class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Industries</a>
+        <a href="#team" class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Founder
+          </a>
+        <a href="#feedback"
+          class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Client
+          Feedback</a>
+        <a href="#contact"
+          class="text-gray-700 dark:text-gray-300 hover:text-primary font-bold py-2 font-garamond">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- 🔵 Floating Binary Code Background -->
+    <div id="binaries" class="absolute inset-0 z-0 pointer-events-none"></div>
+
+    <!-- 🔴 Particle Decorations (Unchanged) -->
+    <div class="particle" style="top: 10%; left: 10%; width: 4px; height: 4px; animation-delay: 0s;"></div>
+    <div class="particle" style="top: 20%; right: 15%; width: 6px; height: 6px; animation-delay: 1s;"></div>
+    <div class="particle" style="bottom: 30%; left: 20%; width: 3px; height: 3px; animation-delay: 2s;"></div>
+    <div class="particle" style="bottom: 20%; right: 25%; width: 5px; height: 5px; animation-delay: 3s;"></div>
+    <div class="particle" style="top: 50%; left: 5%; width: 2px; height: 2px; animation-delay: 4s;"></div>
+    <div class="particle" style="top: 70%; right: 10%; width: 4px; height: 4px; animation-delay: 5s;"></div>
+
+    <!-- 🟢 Hero Content (Unchanged) -->
+    <div class="hero-content w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-6 fade-in">
+          <div
+            class="flex items-center space-x-2 bg-red-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-red-500/30">
+            <i class="ri-star-fill text-red-400 text-sm"></i>
+            <span class="text-red-200 text-sm font-medium font-garamond">We don't just code. We create the
+              future.</span>
+          </div>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl  text-white mb-6 slide-in-left font-garamond">
+          Welcome to <span class="font-garamond">
+            <span class="text-blue-600 font-garamond  font-bold drop-shadow-[0_0_6px_#00f]">F</span><span
+              class="text-red-700 font-garamond font-bold  drop-shadow-[0_0_6px_#f00]">K</span>
+          </span>
+          <span class="text-sky-400 font-garamond">ode</span> <span class="text-sky-400 font-garamond">Solution</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-blue-200 mb-8 slide-in-right font-garamond" style="animation-delay: 0.2s;">
+          Your Partner in Digital Transformation
+        </p>
+        <div class="max-w-3xl mx-auto mb-12 fade-in" style="animation-delay: 0.4s;">
+          <p class="text-lg text-gray-300 leading-relaxed font-garamond">
+            FKode is a modern digital agency built for the future.
+            From enterprise apps to startup MVPs, we craft meaningful projects that deliver
+            meaningful software that delivers results.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in"
+          style="animation-delay: 0.6s;">
+          <!-- Get Started button - scrolls to contact section -->
+          <button id="btn-contact"
+            class=" font-garamond btn-hover bg-red-500 hover:bg-red-600 text-white px-8 py-4 !rounded-button font-semibold text-lg whitespace-nowrap transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            Get Started
+            <i class="ri-arrow-right-line ml-2"></i>
+          </button>
+
+          <!-- View Services button - scrolls to offer section -->
+          <button id="btn-offer"
+            class="font-garamond btn-hover border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 !rounded-button font-semibold text-lg whitespace-nowrap transition-all duration-300 transform hover:scale-105">
+            View Services
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services(what we offer) -->
+  <section id="offer" class="py-20 bg-sky-100 dark:bg-gray-900 theme-transition" >
+    
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-right">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
+      Our Services
+    </h2>
+    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-serif">
+      We provide comprehensive digital solutions to transform your business and drive growth 
+      in the modern digital landscape.
+    </p>
+  </div>
+</div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="flip-left" data-aos-delay="400" >
+        <!-- Mobile Development -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#3b82f680] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+
+          <!-- Image with overlay -->
+
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop"
+              alt="Mobile Development" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold font-playfair mb-1">iOS & Android Apps</h4>
+              <p class="text-white text-sm opacity-90">Native mobile applications</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+
+          <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-smartphone-line text-white text-xl"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-garamond">Mobile Development</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed font-garamond">
+            Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and
+            Android platforms.
+          </p>
+        </div>
+
+        <!-- Web Development Card with Image -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#22c55e80] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition font-garamond" >
+
+          <!-- Image with overlay -->
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=400&h=200&fit=crop"
+              alt="Web Development" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold mb-1 font-garamond">Modern Web Apps</h4>
+              <p class="text-white text-sm opacity-90 font-garamond">Optimized for performance</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 bg-green-800 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-global-line text-white text-xl font-garamond"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-garamond ">Web Development</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed font-garamond">
+            Modern web applications built with cutting-edge technologies, optimized for performance and scalability.
+          </p>
+        </div>
+
+
+
+        <!-- Custom System Software Card  -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#ec489980] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition font-garamond" >
+
+          <!-- Image with overlay -->
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=200&fit=crop"
+              alt="Custom System Software" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold mb-1 font-garamond">Custom Solutions</h4>
+              <p class="text-white text-sm opacity-90 font-garamond">Optimized for your business</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 bg-pink-800 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-server-line text-white text-xl"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-garamond">Custom System Software</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed font-garamond">
+            Tailor-made system software designed to enhance performance, ensure data security,
+            and meet specific business requirements — all while maintaining compliance with industry standards.
+          </p>
+        </div>
+
+
+
+        <!-- Student Project Assistance Card -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#eab30880] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition font-garamond">
+
+          <!-- Image with overlay -->
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop"
+              alt="Student Project Assistance" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold mb-1 font-garamond ">Academic Project Help</h4>
+              <p class="text-white text-sm opacity-90 font-garamond">From idea to deployment</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 bg-yellow-800 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-graduation-cap-line text-white text-xl"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 font-garamond">Student Project Assistance</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed font-garamond">
+            End-to-end support for academic projects, including idea development, coding, documentation, and
+            deployment — tailored to help students build real-world skills and succeed with confidence.
+          </p>
+        </div>
+
+
+        <!-- Smart Add-ons (AI/ML) Card -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#ef444480] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition font-garamond">
+
+          <!-- Image with overlay -->
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop"
+              alt="AI and Machine Learning" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold mb-1">AI & ML Solutions</h4>
+              <p class="text-white text-sm opacity-90">Predictive & Automated Features</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 bg-red-800 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-cpu-line text-white text-xl"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Smart Add-ons (AI/ML)</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Enhance your applications with intelligent features powered by AI and machine learning — from predictive
+            analytics to personalized automation that boosts performance and user experience.
+          </p>
+        </div>
+
+
+        <!-- Startup MVP Support Card -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#06b6d480] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition font-garamond">
+
+          <!-- Image with overlay -->
+          <div class="relative group mb-4" data-aos="fade-down">
+            <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400&h=200&fit=crop"
+              alt="Startup MVP" class="rounded-xl w-full h-32 object-cover">
+
+            <!-- Hover text overlay -->
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <h4 class="text-white text-lg font-bold mb-1">Launch Your MVP</h4>
+              <p class="text-white text-sm opacity-90">Scalable & Fast Deployment</p>
+            </div>
+          </div>
+
+          <!-- Icon -->
+          <div class="w-12 h-12 bg-cyan-800 rounded-xl flex items-center justify-center mb-6">
+            <i class="ri-rocket-line text-white text-xl"></i>
+          </div>
+
+          <!-- Card content -->
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Startup MVP Support</h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Rapid MVP development for startups with scalable architecture, clean UI, and reliable backend support —
+            helping you validate ideas and launch faster.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why FKode -->
+  <section id="why"
+    class="py-20 pb-60 sm:pb-40 bg-gradient-to-br from-sky-100 to-sky-200 dark:from-gray-800 dark:to-gray-900 theme-transition">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Title -->
+      <div class="text-center mb-16" >
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-garamond" >
+          Why Choose FKode Solution?
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto font-garamond">
+          We combine technical expertise with creative innovation to deliver solutions that drive real business
+          results.
+        </p>
+      </div>
+
+      <!-- Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" >
+
+        <!-- Left: Feature Points -->
+        <div class="space-y-8" data-aos="flip-up">
+          <!-- Point 1 -->
+          <div class="flex items-start space-x-4" >
+            <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-rocket-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">Fast Development Cycles
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">Rapid delivery without compromising quality.</p>
+            </div>
+          </div>
+          <!-- Point 2 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-team-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">Expert Team</h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">Our experienced professionals span multiple
+                industries.</p>
+            </div>
+          </div>
+          <!-- Point 3 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-settings-3-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">Cutting-Edge Technology
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">Built using modern frameworks and tools.</p>
+            </div>
+          </div>
+          <!-- Point 4 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-customer-service-2-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">Transparent Support</h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">Regular updates, quick support, and maintenance.
+              </p>
+            </div>
+          </div>
+          <!-- Point 5-->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-graduation-cap-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">Affordable for Students
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">Let's discuss your project with no oblication.
+              </p>
+            </div>
+          </div>
+          <!-- Point 4 -->
+          <div class="flex items-start space-x-4">
+            <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mt-1 flex-shrink-0">
+              <i class="ri-time-line text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 font-garamond">On-Time Delivery </h3>
+              <p class="text-gray-600 dark:text-gray-400 font-garamond">We respect deadlines and deliver when we
+                promise.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Image + Overlapping Core Value Box -->
+        <div class="relative" data-aos="zoom-in">
+          <!-- Team Image -->
+          <img src="service-img.jpg" alt="FKode Solution Team"
+            class="rounded-2xl shadow-2xl object-cover w-full h-96 sm:-mt-16 mt-0">
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl"></div>
+
+          <!-- Core Values Box Overlapping Bottom -->
+          <div
+            class="absolute right-0 sm:right-6 bottom-[-150px] sm:bottom-[-180px] w-full max-w-sm bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow-lg px-5 pt-6 pb-8 sm:p-5 text-sm">
+            <h4 class="font-semibold mb-3 flex items-center gap-2 font-garamond">
+              <i class="ri-star-smile-line text-yellow-400 text-lg font-garamond"></i> Our Core Values
+            </h4>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 font-garamond"><i
+                  class="ri-check-line text-green-500 mt-1 font-garamond"></i> Build only what’s
+                needed — clean & useful</li>
+              <li class="flex items-start gap-2 font-garamond"><i
+                  class="ri-check-line text-green-500 mt-1 font-garamond"></i> Keep users first —
+                always</li>
+              <li class="flex items-start gap-2 font-garamond"><i
+                  class="ri-check-line text-green-500 mt-1 font-garamond"></i> Communicate clearly
+              </li>
+              <li class="flex items-start gap-2 font-garamond"><i
+                  class="ri-check-line text-green-500 mt-1 font-garamond"></i> Grow with every
+                project</li>
+              <li class="flex items-start gap-2 font-garamond"><i
+                  class="ri-check-line text-green-500 mt-1 font-garamond"></i> Deliver like it’s
+                your own product</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Tech Stack-->
+  <section id="tech"
+    class="py-16 px-4 text-gray-900 dark:text-white bg-gradient-to-br from-sky-100 to-sky-200 dark:from-gray-900 dark:to-gray-950 theme-transition">
+
+
+    <!--Section Heading-->
+    <div class="text-center mb-20" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">>
+      <div
+        class="inline-flex px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-600 rounded-full items-center justify-center mx-auto mb-6 shadow-lg shadow-fuchsia-500/50">
+        <i class="ri-stack-line text-white text-4xl animate-pulse"></i>
+      </div>
+      <h2 class="text-4xl font-extrabold font-garamond">Full Tech Stack Overview</h2>
+      <p class="text-center  font-bold b-20 text-gray-500 dark:text-gray-300 font-garamond">
+        A curated collection of technologies used across design, development,<br> and deployment.
+        Optimized for performance, scalability, and seamless collaboration.
+      </p>
+    </div>
+
+    <!-- FRONTEND  -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold mb-2 text-center flex justify-center items-center gap-2 font-garamond">
+        <i class="ri-brush-line text-pink-500 text-3xl font-garamond"></i>
+        Frontend Technologies
+      </h3>
+      <p class="text-center font-bold text-sm mb-8 text-gray-500 dark:text-gray-300 font-garamond"> Build sleek,
+        responsive, and
+        interactive user interfaces for the modern web.
+        <br> From layouts to dynamic components, everything starts at the front.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+        <!-- React -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#3b82f680] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition" >
+          <div class="h-2 w-full mb-4 rounded bg-blue-600/60"></div>
+          <i class="ri-reactjs-line text-blue-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">React.js</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">JavaScript library for building fast,
+            dynamic UIs.
+            Uses components and virtual DOM for performance.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> SPAs,
+            Dashboards, E‑commerce
+          </p>
+        </div>
+
+        <!-- Flutter -->
+         
+        <div 
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#22c55e80] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition" >
+          <div class="h-2 w-full mb-4 rounded bg-green-500/60" ></div>
+          <i class="ri-flutter-line text-green-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">Flutter</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Google’s UI toolkit for building
+            natively compiled
+            apps. One codebase for mobile, web, and desktop.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Mobile apps,
+            MVPs, Web apps
+          </p>
+        </div>
+
+        <!-- HTML/CSS -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#eab30880] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-orange-500/60"></div>
+          <i class="ri-code-s-slash-line text-orange-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">HTML5 & CSS3</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Builds the structure and style of
+            modern web pages.
+            Enables responsive, semantic, and styled layouts.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Layout,
+            Responsive UI,
+            Animation</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#ef444480] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-yellow-400/60"></div>
+          <i class="ri-javascript-line text-yellow-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">JavaScript</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">JavaScript adds interactivity to
+            websites. It powers
+            dynamic content and user actions.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Forms, SPA, DOM,
+            APIs</p>
+        </div>
+      </div>
+    </div>
+
+    <!--  BACKEND  -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold mb-10 text-center flex justify-center items-center gap-2 font-garamond">
+        <i class="ri-database-2-line text-cyan-400 text-3xl font-garamond"></i>
+        Backend Frameworks
+      </h3>
+      <p class="text-center font-bold text-sm mb-8 text-gray-500 dark:text-gray-300 font-garamond">Powerful backend
+        frameworks
+        handle server
+        logic, APIs, and database interactions.
+        <br>They ensure secure, scalable, and efficient web application development.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="flip-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+
+        <!-- Node.js -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#22c55e80] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-green-500/60"></div>
+          <i class="ri-nodejs-line text-green-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">Node.js</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond"> JavaScript runtime for scalable
+            back‑end apps, ideal
+            for building fast, event-driven servers and real-time applications.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> APIs, Real‑time
+            apps,
+            Streaming</p>
+        </div>
+
+        <!-- Express.js -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#3b82f680] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-blue-600/60"></div>
+          <i class="ri-server-line text-blue-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">Express.js</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond"> Minimalist Node.js framework for
+            building fast,
+            flexible REST APIs and middleware with robust routing.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Middleware, Web
+            APIs, SPA
+          </p>
+        </div>
+
+        <!-- Spring Boot -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#eab30880] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-orange-500/60"></div>
+          <i class="ri-leaf-line text-orange-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">Spring Boot</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Java framework for building secure,
+            scalable backend
+            services with embedded servers and production-ready features.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Enterprise apps,
+            APIs, Auth
+          </p>
+        </div>
+
+        <!-- Django -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#ef444480] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-yellow-400/60"></div>
+          <i class="ri-python-line text-yellow-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 font-garamond">Django</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond"> Python framework with clean
+            architecture, built-in
+            security features, and rapid development capabilities.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> CMS, Admin apps,
+            Secure APIs
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!--  DATABASES -->
+    <div>
+      <!-- Heading with Icon -->
+      <h3
+        class="text-3xl font-bold mb-2 text-center flex justify-center items-center gap-2 text-gray-900 dark:text-white font-garamond">
+        <i class="ri-database-2-line text-yellow-500 text-3xl font-garamond"></i>
+        Database Solutions
+      </h3>
+      <p class="text-center font-bold text-sm mb-8 text-gray-500 dark:text-gray-300 font-garamond"> Robust and scalable
+        databases
+        powering data-driven applications.
+        <br>Designed for efficient storage, retrieval, and management of structured data.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="flip-up"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+
+        <!-- MongoDB -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#22c55e80] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-green-500/60"></div>
+          <i class="ri-database-2-line text-green-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-800 dark:text-white font-garamond">MongoDB</h4>
+          <p class="text-gray-600 dark:text-gray-300 mb-2 font-garamond"> NoSQL document database designed for
+            flexibility and
+            scalability, perfect for handling unstructured data and real-time applications..</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> IoT, Real-time
+            analytics
+          </p>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#3b82f680] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-blue-600/60"></div>
+          <i class="ri-database-line text-blue-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-800 dark:text-white font-garamond">PostgreSQL</h4>
+          <p class="text-gray-600 text-sm dark:text-gray-300 mb-2 font-garamond"> Advanced open-source relational
+            database with
+            powerful SQL compliance, extensibility, and support for complex queries and large datasets.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Finance, GIS,
+            Warehousing
+          </p>
+        </div>
+
+        <!-- MySQL -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#eab30880] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-orange-500/60"></div>
+          <i class="ri-database-line text-orange-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-800 dark:text-white font-garamond">MySQL</h4>
+          <p class="text-gray-600 text-sm dark:text-gray-300 mb-2 font-garamond"> Reliable and widely-used relational
+            database
+            management system, ideal for web applications with structured data and high performance needs.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> CMS, E-commerce,
+            Web apps
+          </p>
+        </div>
+
+        <!-- Firebase -->
+        <div
+          class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 sm:p-8 max-w-xs mx-auto shadow-[0_0_20px_#ef444480] hover:brightness-110 transition-all duration-300 transform hover:-translate-y-2 theme-transition">
+          <div class="h-2 w-full mb-4 rounded bg-yellow-400/60"></div>
+          <i class="ri-fire-line text-yellow-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-800 dark:text-white font-garamond">Firebase</h4>
+          <p class="text-gray-600 text-sm dark:text-gray-300 mb-2 font-garamond"> Google’s BaaS with authentication and
+            real-time
+            database, enabling fast development of dynamic, cloud-based applications.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Auth, Real-time,
+            Notifications</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!--  DEVOPS  -->
+    <div class=" mt-20 mb-20">
+      <h3 class="text-3xl font-bold mb-2 text-center flex justify-center items-center gap-2 font-garamond">
+        <i class="ri-tools-line text-blue-400 text-3xl font-garamond"></i>
+        DevOps Tools
+      </h3>
+      <p class="text-center font-boldtext-sm mb-8 text-gray-500 dark:text-gray-300 font-garamond"> Automate deployments,
+        monitor
+        infrastructure, and streamline development workflows.
+        <br> DevOps bridges coding and operations for faster, reliable delivery.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="flip-down"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+
+        <!-- Docker -->
+        <div
+          class="tech-card p-6 sm:p-8 max-w-xs mx-auto rounded-xl bg-white dark:bg-[#0f172a] border border-blue-600 shadow-md hover:shadow-blue-400/80 hover:scale-[1.02] transition-all duration-300">
+          <div class="h-2 w-full mb-4 rounded bg-blue-600/60"></div>
+          <i class="ri-docker-line text-blue-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-900 dark:text-white font-garamond">Docker</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Containerization platform for packaging
+            applications and ensuring consistent deployment environments.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Application
+            containerization, Microservices, Dev environments</p>
+        </div>
+
+        <!-- Postman -->
+        <div
+          class="tech-card p-6 sm:p-8 max-w-xs mx-auto rounded-xl bg-white dark:bg-[#0f172a] border border-purple-600 shadow-md hover:shadow-purple-400/80 hover:scale-[1.02] transition-all duration-300">
+          <div class="h-2 w-full mb-4 rounded bg-purple-600/60"></div>
+          <i class="ri-send-plane-line text-purple-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-900 dark:text-white font-garamond">Postman</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Platform for API development and
+            testing with
+            automation tools and collaboration features.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> API testing,
+            Collaboration,
+            Mock servers, API flows</p>
+        </div>
+
+        <!-- GitHub -->
+        <div
+          class="tech-card p-6 sm:p-8 max-w-xs mx-auto rounded-xl bg-white dark:bg-[#0f172a] border border-green-500 shadow-md hover:shadow-green-400/80 hover:scale-[1.02] transition-all duration-300">
+          <div class="h-2 w-full mb-4 rounded bg-green-500/60"></div>
+          <i class="ri-github-fill text-green-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-900 dark:text-white font-garamond">GitHub</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Version control and code collaboration
+            platform
+            supporting CI/CD workflows.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> Code hosting,
+            CI/CD,
+            Open-source collaboration</p>
+        </div>
+
+        <!-- Figma -->
+        <div
+          class="tech-card p-6 sm:p-8 max-w-xs mx-auto rounded-xl bg-white dark:bg-[#0f172a] border border-pink-500 shadow-md hover:shadow-pink-400/80 hover:scale-[1.02] transition-all duration-300">
+          <div class="h-2 w-full mb-4 rounded bg-pink-500/60"></div>
+          <i class="ri-shapes-line text-pink-400 text-2xl"></i>
+          <h4 class="text-lg font-semibold mt-2 mb-2 text-gray-900 dark:text-white font-garamond">Figma</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mb-2 font-garamond">Collaborative UI/UX design tool for
+            wireframing,
+            prototyping, and systems.</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 font-garamond"><strong>Use Cases:</strong> UI design,
+            Prototypes,
+            Design systems, Team collab</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- Industry -->
+  <section id="industries"
+    class="py-20 bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-800 dark:to-gray-900 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="zoom-in">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-garamond">
+          Industries We Serve
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-base sm:text-lg font-garamond">
+          From education to logistics, we craft tailored digital solutions across diverse sectors. Our expertise helps
+          businesses scale, streamline operations, and deliver impactful user experiences.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6">
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,102,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-graduation-cap-fill text-3xl text-pink-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">EdTech & Student Portals</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Innovative learning platforms and
+              student management systems for educational institutions.</h4>
+          </div>
+
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,255,128,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-heart-pulse-fill text-3xl text-green-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">Healthcare Management</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Comprehensive healthcare solutions
+              for patient care and medical facility management.</h4>
+          </div>
+
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,140,0,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-shopping-cart-2-fill text-3xl text-orange-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">Retail & Inventory Systems</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Advanced retail solutions with
+              inventory tracking and customer management.</h4>
+          </div>
+
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,102,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-truck-fill text-3xl text-yellow-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">Logistics Dashboards</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Real-time logistics tracking and
+              supply chain management solutions.</h4>
+          </div>
+
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,191,255,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-cloud-fill text-3xl text-blue-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">SaaS Products</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Scalable software-as-a-service
+              solutions for modern business needs.</h4>
+          </div>
+
+          <div
+            class="bg-gray-900 text-white rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(186,85,211,0.6)] hover:bg-[#1e1e1e] active:scale-105">
+            <i class="ri-hand-heart-fill text-3xl text-purple-500 mb-3"></i>
+            <h3 class="text-center text-base sm:text-lg font-semibold font-garamond">NGO & Safety Tools</h3>
+            <h4 class="text-center text-base sm:text-lg font-semibold font-garamond">Specialized tools for non-profits
+              and community safety initiatives.</h4>
+          </div>
+        </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="team"
+    class="relative overflow-hidden py-16 px-6 sm:px-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+    <!-- Particle Background -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+
+      <!-- Left: Founder Info -->
+      <div class="md:w-1/2 text-center md:text-left animate-fade-in-up">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 font-garamond">Our Founder
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4 font-garamond">
+          Passionate about technology and innovation, our founder brings over a decade of experience in mobile and web
+          development. Their vision drives everything we build — elegant, powerful, and user-first.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4 font-garamond">
+          A hands-on leader and lifelong learner, they champion clean code, strong design, and meaningful impact.
+        </p>
+
+        <!-- Meet Our Team Button -->
+        <a href="Team.html
+        "
+          class="inline-block mt-4 px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-400 dark:text-cyan-300 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black dark:hover:text-white transition-all duration-300 shadow-[0_0_15px_#22d3ee80] hover:shadow-[0_0_25px_#22d3ee]">
+          Meet Our Team
+        </a>
+      </div>
+
+      <!-- Right: Founder Image -->
+      <div class="md:w-1/2 flex justify-center md:justify-center animate-fade-in" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+        <img src="pic1.png" alt="Founder"
+          class="w-full max-w-[300px] sm:max-w-[350px] rounded-3xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_30px_#22d3ee]" />
+      </div>
+  </section>
+
+  <!-- Feedback Section -->
+<section id="feedback"
+  class="relative py-20 bg-gradient-to-br from-sky-100 to-sky-200 dark:from-gray-800 dark:to-gray-900 overflow-hidden" >
+
+  <!-- Particle.js Background -->
+  <div id="particles-js" class="absolute inset-0 w-full h-full z-0"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto text-center mb-10 px-4" data-aos="flip-down">
+    <h2 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white font-garamond">What Our Clients Say
+    </h2>
+    <p class="text-gray-500 dark:text-gray-400 text-lg mt-2 font-garamond">Trusted by startups, enterprises, and
+      students across domains</p>
+  </div>
+
+  <div class="carousel-container max-w-xl mx-auto overflow-hidden relative z-10" id="carousel">
+    <div class="carousel-track flex transition-transform duration-500">
+
+      <!-- 10 Feedback Cards -->
+      <div class="min-w-full px-4" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"FKode built our mobile app with the same care we
+            would."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Business Client</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Best mentor team for student projects."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Engineering Student</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"From WhatsApp to deployment, their process is
+            smooth."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Startup Founder</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Quick turnarounds and impressive quality every
+            time."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Tech Consultant</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Their UI/UX work elevated our platform’s user
+            experience."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— UI Designer</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"FKode helped us pivot fast with stable backend
+            support."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Product Owner</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Reliable, scalable solutions even for short
+            timelines."</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— SaaS Client</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Excellent support throughout our project cycle."
+          </p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Corporate Partner</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"Friendly, fast, and cost-effective. Highly
+            recommend!"</p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond">— Independent Developer</div>
+        </div>
+      </div>
+
+      <div class="min-w-full px-4">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-cyan-500/50 transition">
+          <p class="text-gray-600 dark:text-gray-300 font-garamond">"They made even complex integrations look easy."
+          </p>
+          <div class="mt-4 font-semibold text-gray-900 dark:text-white font-garamond ">— DevOps Engineer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 text-center relative z-10">
+    <button onclick="showNext()"
+      class="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition font-garamond">
+      Next Feedback
+    </button>
+  </div>
+</section>
+
+<!-- Particles.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  // Initialize particles.js on #particles-js div with correct size and animation
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 60 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 120,
+        color: "#22d3ee",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        out_mode: "bounce"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: false }
+      }
+    },
+    retina_detect: true
+  });
+
+  // Carousel logic for next button
+  let currentIndex = 0;
+  const track = document.querySelector('.carousel-track');
+  const totalCards = track.children.length;
+  function showNext() {
+    currentIndex = (currentIndex + 1) % totalCards;
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
+
+
+
+  <!-- Contact -->
+  <section id="contact"
+    class="py-20 bg-gradient-to-br from-blue-50 to-sky-100 dark:from-gray-900 dark:to-gray-950 theme-transition ">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start px-4 sm:px-6 lg:px-8"  data-aos="flip-up">
+
+      <!-- Left Contact Info -->
+      <div class="space-y-6" >
+        <h2
+          class="font-garamond text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 tracking-tight leading-tight sm:leading-[1.2]">
+          Let’s Build Something Amazing Together
+        </h2>
+        <p class="text-gray-400 text-lg font-garamond">Ready to start your project? Get in touch with us for a free
+          consultation.
+        </p>
+
+        <div class="space-y-5">
+          <!-- Location -->
+          <div class="flex items-center gap-4 group">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-pink-500 to-cyan-400 shadow-lg group-hover:scale-110 transform transition duration-300">
+              <i class="ri-map-pin-line text-2xl text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2 font-garamond">Location</h4>
+              <a href="https://maps.google.com/?q=14/31 Perumal Koil Street, Jagannatha Nagar, Arumbakkam, Chennai, Tamil Nadu 600106"
+                target="_blank" class="text-indigo-400 hover:underline font-garamond">
+                NO:14/31 PERUMAL KOIL STREET, NEAR PANCHALI AMMAN TEMPLE, ARUMBAKKAM, CHENNAI - 600106
+              </a>
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="flex items-center gap-4 group">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-green-400 to-teal-500 shadow-lg group-hover:scale-110 transform transition duration-300">
+              <i class="ri-whatsapp-line text-2xl text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2 font-garamond">WhatsApp</h4>
+              <a href="https://wa.me/919150282859" target="_blank"
+                class="text-indigo-400 hover:underline font-garamond">
+                +91-9150282859
+              </a>
+            </div>
+          </div>
+
+          <!-- Website -->
+          <div class="flex items-center gap-4 group">
+            <div
+              class="p-3 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 shadow-lg group-hover:scale-110 transform transition duration-300">
+              <i class="ri-global-line text-2xl text-white"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold mb-2 font-garamond">Website</h4>
+              <a href="https://www.fkodesolution.com" target="_blank"
+                class="text-indigo-400 hover:underline font-garamond">
+                www.fkodesolution.com
+              </a>
+            </div>
+          </div>
+
+          <!-- WhatsApp CTA -->
+          <div
+            class="bg-gradient-to-br from-slate-800 to-gray-900 p-6 rounded-xl shadow-[0_0_20px_#22d3ee50] border border-cyan-500 mt-6">
+            <h3 class="text-white font-semibold text-lg mb-3 font-garamond">Free 30-min Idea Call – Let’s Talk!</h3>
+            <a href="https://wa.me/919150282859" target="_blank"
+              class="inline-flex items-center gap-2 px-6 py-2 rounded-lg bg-red-500 hover:bg-red-600 transition-all duration-300 text-white font-medium shadow-md">
+              <i class="ri-whatsapp-line text-xl font-garamond"></i> Start WhatsApp Chat
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Wrapper -->
+      <div class="relative">
+
+        <!-- ✅ Success Modal Box (white in all themes) -->
+        <div id="successModal"
+          class="hidden fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+          <div class="bg-white text-center rounded-xl p-6 shadow-lg max-w-sm w-full border border-green-500">
+            <h3 class="text-xl font-bold text-green-600 mb-2 font-garamond">🎉 Thank You!</h3>
+            <p class="text-gray-700 font-garamond">We will contact you shortly.</p>
+          </div>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div
+          class="bg-gradient-to-br from-slate-900 to-gray-800 dark:from-slate-900 dark:to-gray-800 p-8 rounded-xl shadow-[0_0_30px_#f43f5e50] border border-pink-600 transition-all duration-300 text-white dark:text-white">
+
+          <h3 class="text-xl font-semibold mb-6 text-white dark:text-white font-garamond">Send Us a Message</h3>
+          <form id="contactForm" class="space-y-4">
+            <!-- Name & Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-garamond">
+              <input type="text" name="name" placeholder="Your Name"
+                class="w-full bg-white dark:bg-black/70 border border-gray-300 dark:border-gray-600 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300 ease-in-out shadow-sm" />
+              <input type="tel" name="phone" placeholder="Phone Number"
+                class="w-full bg-white dark:bg-black/70 border border-gray-300 dark:border-gray-600 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300 ease-in-out shadow-sm" />
+              <input type="email" name="email" placeholder="Your Email"
+                class="w-full bg-white dark:bg-black/70 border border-gray-300 dark:border-gray-600 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300 ease-in-out shadow-sm" />
+            </div>
+
+            <!-- Project Type Dropdown -->
+            <div class="relative inline-block w-full">
+              <button id="dropdownButton" type="button"
+                class=" font-garamond w-full bg-white dark:bg-black/70 border border-gray-300 dark:border-gray-600 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 shadow-sm text-left">
+                Select Project Type
+              </button>
+              <div id="dropdownOptions"
+                class=" absolute z-10 w-full mt-1 bg-black dark:bg-black/90 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg max-h-72 overflow-y-auto hidden">
+
+                <!-- Design -->
+                <div class="px-4 py-2 text-sm font-semibold text-gray-500 dark:text-gray-400 font-garamond">Design</div>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Website Design" class="mr-2 font-garamond"> Website
+                  Design
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Logo Design" class="mr-2 font-garamond"> Logo Design
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="UI/UX Design" class="mr-2 font-garamond"> UI/UX Design
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Landing Page" class="mr-2 font-garamond"> Landing Page
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Portfolio Website" class="mr-2 font-garamond"> Portfolio
+                  Website
+                </label>
+
+                <!-- Development -->
+                <div class="px-4 py-2 text-sm font-semibold text-gray-500 dark:text-gray-400 font-garamond">Development
+                </div>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Web App" class="mr-2 font-garamond"> Web App
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="E-commerce" class="mr-2 font-garamond"> E-commerce
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="API Development" class="mr-2 font-garamond"> API
+                  Development
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Chatbot" class="mr-2 font-garamond"> Chatbot
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Custom Software" class="mr-2 font-garamond"> Custom
+                  Software
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="SaaS Product" class="mr-2 font-garamond"> SaaS Product
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="AI/ML Integration" class="mr-2 font-garamond"> AI/ML
+                  Integration
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Content Management System" class="mr-2 font-garamond">
+                  Content
+                  Management System
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Mobile App" class="mr-2 font-garamond"> Mobile App
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="ERP System" class="mr-2 font-garamond"> ERP System
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="CRM Tool" class="mr-2 font-garamond"> CRM Tool
+                </label>
+
+                <!-- Business Solutions -->
+                <div class="px-4 py-2 text-sm font-semibold text-gray-500 dark:text-gray-400 font-garamond">Business
+                  Solutions</div>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Startup MVP" class="mr-2 font-garamond"> Startup MVP
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Business Automation" class="mr-2 font-garamond"> Business
+                  Automation
+                </label>
+
+                <!-- Other Services -->
+                <div class="px-4 py-2 text-sm font-semibold text-gray-500 dark:text-gray-400 font-garamond">Other
+                  Services</div>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Internship" class="mr-2 font-garamond"> Internship
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="College Project" class="mr-2 font-garamond"> College
+                  Project
+                </label>
+                <label class="flex items-center px-4 py-1">
+                  <input type="checkbox" name="project" value="Other" class="mr-2 font-garamond"> Other
+                </label>
+              </div>
+            </div>
+
+            </select>
+
+            <!-- Message Box -->
+            <textarea name="message" rows="4" placeholder="Tell us about your project..."
+              class="font-garamond w-full bg-white dark:bg-black/70 border border-gray-300 dark:border-gray-600 text-black dark:text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300 ease-in-out shadow-sm"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-red-500 hover:to-pink-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg font-garamond">
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
+  </section>
+
+
+  </main>
+
+  <!-- Final details -->
+  <footer class="bg-gray-900 dark:bg-black text-white py-16 theme-transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"  data-aos="fade-up"
+     data-aos-duration="500">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <div class="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+              <img src="ori-logo.jpeg" alt="FKode Logo" class="w-full h-full object-contain">
+            </div>
+            <span class="font-garamond text-xl font-bold text-white dark:text-white group hover:cursor-pointer">
+              <span class="transition-colors duration-300 group-hover:text-red-800 font-garamond">FKode</span>
+              <span class="transition-colors duration-300 group-hover:text-sky-400 font-garamond"> Solution</span>
+            </span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-6 font-garamond">
+            Transforming businesses through innovative digital solutions and cutting-edge technology.
+          </p>
+          <div class="flex space-x-4">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="ri-linkedin-fill text-gray-300"></i>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="ri-twitter-fill text-gray-300"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="ri-github-fill text-gray-300"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/91YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer"
+              class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="ri-whatsapp-fill text-gray-300"></i>
+            </a>
+          </div>
+
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-6 font-garamond ">Services</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><span class="hover:text-white transition-colors font-garamond">Web Development</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Mobile Apps</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Custom System Software</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Website Design</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Chatbot development</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">API Development</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Saas Product support</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-6 font-garamond">Also we provide</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><span class="hover:text-white transition-colors font-garamond">Student Project Assistance</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Smart Add-ons (AI/ML)</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Startup MVP Support</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Final year Student Project
+                Assistance</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Internship</span></li>
+            <li><span class="hover:text-white transition-colors font-garamond">Logo Designs</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-6 font-garamond">Contact Info</h3>
+          <div class="space-y-3">
+            <div class="flex items-center space-x-3">
+              <i class="ri-mail-line text-primary"></i>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fkode.careers@gmail.com" target="_blank"
+                class="text-gray-400 hover:underline font-garamond">
+                fkode.careers@gmail.com
+              </a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i class="ri-phone-line text-primary"></i>
+              <a href="tel:+91-9150282859" class="text-gray-400 hover:underline font-garamond">
+                +91-9150282859
+              </a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i class="ri-map-pin-line text-primary"></i>
+              <a href="https://maps.google.com/?q=NO:14/31 PERUMAL KOIL STREET, NEAR PANCHALI AMMAN TEMPLE, ARUMBAKKAM, CHENNAI - 600106"
+                target="_blank" class="text-gray-400 hover:underline font-garamond">
+                NO:14/31 PERUMAL KOIL STREET, NEAR PANCHALI AMMAN TEMPLE, ARUMBAKKAM, CHENNAI - 600106
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <p class="text-gray-400 text-sm font-garamond">
+            © 2025 FKode Solution. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="privacy-policy.html"
+              class="text-gray-400 hover:text-white text-sm transition-colors font-garamond">
+              Privacy Policy
+            </a>
+            <a href="terms-and-conditions.html"
+              class="text-gray-400 hover:text-white text-sm transition-colors font-garamond">
+              Terms of Conditions
+            </a>
+            <a href="cookie-policy.html" class="text-gray-400 hover:text-white text-sm transition-colors font-garamond">
+              Cookie Policy
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+  <script>
+  AOS.init();
+</script>
+</body>
+
+</html>
